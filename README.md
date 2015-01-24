@@ -42,7 +42,7 @@ b.push(11)[b.startIndex]        // -> 1
 b[2]                            // -> 3
 b.shift()                       // -> {Some 1}  // because the Type has been never defined
 
-var shifted = b.shift() as Int? // -> {Some 2} // it must be bad at grammer because pop and shift may return nil
+var shifted = b.shift() as Int? // -> {Some 2} // it must be bad at grammar because pop and shift may return nil
 b.splice(0, b.count-2)          // splice 7 elements with no adding. wow it's the very Perl-like!
 var popped :Int! =  b.pop()?    // -> 11    // it will be a better way
 popped =  b.pop() as Int?       // -> 10    // how to down cast
