@@ -1,8 +1,9 @@
 # Swift-Extension-Array-like-Perl
 Array operations with Perl-Like grammar in Swift
 
-```test.swift
-//Use like bellow
+##Use like bellow
+
+```
 var a :Array = ["Four", "Seven"]
 a.splice(["Five", "Six"], atIndex: 1)   // using a default splice
 a.splice(2, 0, "Five2" )                // -> nil   //use splice with no adding. it returns nil but sucsesses to splice
@@ -27,9 +28,10 @@ a.count                                 // -> 10
 a.shift()                               // remove one value from the top of this Array
 a.pop()                                 // remove one value from the bottom of this Array
 a.count                                 // -> 8
+```
+## for Int
 
-
-// for Int
+```
 var b :Array = [4, 7, 8 ]       // -> [4,7,8]
 b.count                         // -> 3
 b.splice([5, 6], atIndex: 1)    // -> [4,5,6,7,8]
@@ -41,7 +43,6 @@ b.push(9, 10)[1...3]            // -> [2,3,4]
 b.push(11)[b.startIndex]        // -> 1
 b[2]                            // -> 3
 b.shift()                       // -> {Some 1}  // because the Type has been never defined
-
 var shifted = b.shift() as Int? // -> {Some 2} // it must be bad at grammar because pop and shift may return nil
 b.splice(0, b.count-2)          // splice 7 elements with no adding. wow it's the very Perl-like!
 var popped :Int! =  b.pop()?    // -> 11    // it will be a better way
